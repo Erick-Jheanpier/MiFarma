@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const VendedorController_1 = require("../empresarial/controllers/VendedorController");
+const router = (0, express_1.Router)();
+router.get("/getAllVendedores", VendedorController_1.getAllVendedores);
+router.get("/getVendedorById/:id", VendedorController_1.getVendedorById);
+router.post("/createVendedor", VendedorController_1.createVendedor);
+router.put("/updateVendedor/:id", VendedorController_1.updateVendedor);
+router.delete("/deleteVendedor/:id", VendedorController_1.deleteVendedor);
+exports.default = router;

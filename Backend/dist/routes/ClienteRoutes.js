@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const ClienteController_1 = require("../empresarial/controllers/ClienteController");
+const router = (0, express_1.Router)();
+router.get('/getAllClientes', ClienteController_1.getAllClientes);
+router.get('/getClienteById/:id', ClienteController_1.getClienteById);
+router.post('/createCliente', ClienteController_1.createCliente);
+router.put('/updateCliente/:id', ClienteController_1.updateCliente);
+router.delete('/deleteCliente/:id', ClienteController_1.deleteCliente);
+exports.default = router;
