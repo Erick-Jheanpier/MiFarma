@@ -1,0 +1,1113 @@
+type: collection.insomnia.rest/5.0
+name: MiFarma
+meta:
+  id: wrk_05280c6fc6aa4b54b25a014ca279ebad
+  created: 1745102321579
+  modified: 1745102321579
+collection:
+  - name: Person
+    meta:
+      id: fld_1307492ccb16452aa0db3138e1d04333
+      created: 1745102810422
+      modified: 1745102810422
+      sortKey: -1745102810422
+    children:
+      - url: "{{ _.url }}/persona/getAllPerson"
+        name: getAllPerson
+        meta:
+          id: req_f9e516d11642491cbc10b35866416e41
+          created: 1745102839071
+          modified: 1745102876225
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/persona/getPersonById/2"
+        name: getPersonById
+        meta:
+          id: req_79ca6493e2b84d0eb641bdabd4885110
+          created: 1745102913603
+          modified: 1745103437529
+          isPrivate: false
+          sortKey: -1745102913603
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/persona/createPerson"
+        name: createPerson
+        meta:
+          id: req_9beaa7ced19e493b98e261c0bc402471
+          created: 1745102981817
+          modified: 1745103391959
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nombres":"Jeanfer Javier Aldayr",
+            	"apellidos":"Sicha Taboada",
+            	"fecha_nac":"2000-10-05",
+            	"correo":"sicha@gmail.com",
+            	"celular":"935598259",
+            	"id_estado_civil":2,
+            	"id_nivel_socio":3,
+            	"id_tipo_doc":1,
+            	"codigo":"80059291",
+            	"id_distrito":4,
+            	"direccion":"avenida los jazmines 12"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/persona/updatePerson/2"
+        name: updatePerson
+        meta:
+          id: req_0199ebe011c84f3d8d66ab3d349f75b2
+          created: 1745105869088
+          modified: 1745106699276
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id":2,
+            	"nombres":"Jeanfer Javier Aldayr",
+            	"apellidos":"Sicha Taboada",
+            	"fecha_nac":"2000-10-05",
+            	"correo":"",
+            	"celular":"935598259",
+            	"id_estado_civil":2,
+            	"id_nivel_socio":3,
+            	"id_tipo_doc":1,
+            	"codigo":"80059291",
+            	"id_distrito":4,
+            	"direccion":"avenida los jazmines 12"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/persona/deletePerson/2"
+        name: deletePerson
+        meta:
+          id: req_b994f16dc8034dc6a5b53c0ff1b2358b
+          created: 1745106744164
+          modified: 1745106788008
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User
+    meta:
+      id: fld_0d262fdd0eae4f44b5f5335b844e533b
+      created: 1745106984336
+      modified: 1745106984336
+      sortKey: -1738882485106
+    children:
+      - url: "{{ _.url }}/user/getAllUser"
+        name: getAllUser
+        meta:
+          id: req_9230dc2fe38e4e3083c1d01c443e7856
+          created: 1745106984338
+          modified: 1745145007830
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/user/getUserById/1"
+        name: getUserById
+        meta:
+          id: req_927732adc39a4627afa28aec0de1c41e
+          created: 1745106984341
+          modified: 1745145060769
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/user/createUser"
+        name: createUser
+        meta:
+          id: req_817495dc0a2f4e8ab5ad965b533102f5
+          created: 1745106984343
+          modified: 1745145437930
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"passwoard":"Jeanfer123",
+            	"tipo_usuario":"cliente",
+            	"id_persona":2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/user/updateUser/2"
+        name: updateUser
+        meta:
+          id: req_6d8cf7ac075d4d3cbef581c02e7f4dbb
+          created: 1745106984347
+          modified: 1745145674503
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id":2,
+            	"passwoard":"Jenafer13",
+            	"tipo_usuario":"ADMIN",
+            	"id_persona":2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/user/deleteUser/2"
+        name: deleteUser
+        meta:
+          id: req_b41b3e8c1de144e481746cc7ce461c96
+          created: 1745106984349
+          modified: 1745145741827
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: vendedor
+    meta:
+      id: fld_35b7cce19a024146a6b63c659870b60a
+      created: 1745144786535
+      modified: 1745144786535
+      sortKey: -1735772322448
+    children:
+      - url: "{{ _.url }}/vendedor/getAllVendedores"
+        name: getAllVendedores
+        meta:
+          id: req_44b0e469c9ca498ab83e215dfb803aae
+          created: 1745144786538
+          modified: 1745145801344
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/vendedor/getVendedorById/2"
+        name: getVendedorById
+        meta:
+          id: req_8693f999f82c46d59ff33d9ea9c1960a
+          created: 1745144786541
+          modified: 1745146341876
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/vendedor/createVendedor"
+        name: createVendedor
+        meta:
+          id: req_c622b34efe4141d588d5b15d3d45c286
+          created: 1745144786544
+          modified: 1745146132025
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_usuario":2,
+            	"codigo_vendedor":"vendedor01",
+            	"fecha_ingreso":"2025-04-20",
+            	"id_EstadoVendedor":1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/vendedor/updateVendedor/2"
+        name: updateVendedor
+        meta:
+          id: req_21ea679da30248bb9b3ef0748947d3e3
+          created: 1745144786546
+          modified: 1745164324287
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_usuario":2,
+            	"codigo_vendedor":"vendedor02",
+            	"fecha_ingreso":"2025-04-20",
+            	"id_EstadoVendedor":1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/vendedor/deleteVendedor/2"
+        name: deleteVendedor
+        meta:
+          id: req_b7ef7539731a41d8827132f0a6a077a4
+          created: 1745144786549
+          modified: 1745164677839
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: client
+    meta:
+      id: fld_101d7da504c745dfbe5990433c8fa7eb
+      created: 1745144820467
+      modified: 1745144820467
+      sortKey: -1734217241119
+    children:
+      - url: "{{ _.url }}/client/getAllClientes"
+        name: getAllClientes
+        meta:
+          id: req_1ea240ef30df4f3ca017aa6f7bfa97e5
+          created: 1745144820469
+          modified: 1745164849163
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/client/getClienteById/1"
+        name: getClienteById
+        meta:
+          id: req_d492fb6312cb48c2b779688bcf053013
+          created: 1745144820471
+          modified: 1745165010943
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/client/createCliente"
+        name: createCliente
+        meta:
+          id: req_a57863e749fd43f3b529ea7f6bc45fce
+          created: 1745144820474
+          modified: 1745165160301
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_usuario":2,
+            	"id_estado_cliente":1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/client/updateCliente/4"
+        name: updateCliente
+        meta:
+          id: req_f6c46137614c40359f2c708b1d5817b7
+          created: 1745144820476
+          modified: 1745165788978
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id":4,
+            	"id_usuario":2,
+            	"id_estado_cliente":2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/client/deleteCliente/4"
+        name: deleteCliente
+        meta:
+          id: req_e5d9d5c46b204f1a869e7fc6b6dd9729
+          created: 1745144820479
+          modified: 1745165881051
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: product
+    meta:
+      id: fld_c567c5f78b094bd4b0834b2e711d0fd6
+      created: 1745144843861
+      modified: 1745144843861
+      sortKey: -1733439700454.5
+    children:
+      - url: "{{ _.url }}/product/getAllProduct"
+        name: getAllProduct
+        meta:
+          id: req_dde9511148774bfcbf6c295c72b8bebb
+          created: 1745166054000
+          modified: 1745166091937
+          isPrivate: false
+          sortKey: -1745166054000
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/product/getProductById/1"
+        name: getProductById
+        meta:
+          id: req_f6585f9fd80a4733a8a067e61b704cff
+          created: 1745166141942
+          modified: 1745166167965
+          isPrivate: false
+          sortKey: -1745166141942
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/product/createProduct"
+        name: createProduct
+        meta:
+          id: req_3317806c657e4155a2f59792868d6a92
+          created: 1745166217881
+          modified: 1745166559397
+          isPrivate: false
+          sortKey: -1745166217881
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_240c98aa27dd43a7ac958cd64f639558
+              name: nombre
+              value: paracetamol 500g
+              disabled: false
+            - id: pair_79a9ba0a5b6f4154b5e2b368567372f9
+              name: imagen
+              disabled: false
+              type: file
+              fileName: C:\Users\Erick\Downloads\paracetamol.jpg
+            - id: pair_1e08af2a9faf4981b4d2e3d014919c1d
+              name: descripcion
+              value: medicamento solo con receta medica
+              disabled: false
+            - id: pair_1b076e7667c449b3b52a19b9948f671b
+              name: id_categoria
+              value: "1"
+              disabled: false
+            - id: pair_2cf80a8b8cf44c28b55576075d3c8b9d
+              name: id_vendedor
+              value: "1"
+              disabled: false
+            - id: pair_16174904a05c4f98b2b5ae3ff4ff9e8a
+              name: precio_unitario
+              value: "3"
+              disabled: false
+            - id: pair_376298e114574d2987fdfc407f21fd4e
+              name: id_estado_producto
+              value: "1"
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/product/updateProduct/1"
+        name: updateProduct
+        meta:
+          id: req_473ecb9d10fe4972a20017eb2ee4ed66
+          created: 1745166782273
+          modified: 1745166840031
+          isPrivate: false
+          sortKey: -1745166179911.5
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - id: pair_240c98aa27dd43a7ac958cd64f639558
+              name: nombre
+              value: paracetamol 800g
+              disabled: false
+            - id: pair_79a9ba0a5b6f4154b5e2b368567372f9
+              name: imagen
+              disabled: false
+              type: file
+              fileName: C:\Users\Erick\Downloads\perro.jpg
+            - id: pair_1e08af2a9faf4981b4d2e3d014919c1d
+              name: descripcion
+              value: medicamento solo con receta medica
+              disabled: false
+            - id: pair_1b076e7667c449b3b52a19b9948f671b
+              name: id_categoria
+              value: "1"
+              disabled: false
+            - id: pair_2cf80a8b8cf44c28b55576075d3c8b9d
+              name: id_vendedor
+              value: "1"
+              disabled: false
+            - id: pair_16174904a05c4f98b2b5ae3ff4ff9e8a
+              name: precio_unitario
+              value: "3"
+              disabled: false
+            - id: pair_376298e114574d2987fdfc407f21fd4e
+              name: id_estado_producto
+              value: "1"
+              disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/product/deleteProduct/2"
+        name: deleteProduct
+        meta:
+          id: req_76c8e008b830418f9c6e43a5c63144a5
+          created: 1745166888146
+          modified: 1745167142569
+          isPrivate: false
+          sortKey: -1745166888146
+        method: DELETE
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: movimientoStock
+    meta:
+      id: fld_a1c57bfe0a7f4d84bd2915e31752ffeb
+      created: 1745144857564
+      modified: 1745144857564
+      sortKey: -1733050930122.25
+    children:
+      - url: "{{ _.url }}/movimientoStock/getAllMovimientoStock"
+        name: getAllMovimientoStock
+        meta:
+          id: req_04106457685f4c2ca7ad40160c4b0f13
+          created: 1745144857566
+          modified: 1745167562026
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/movimientoStock/getMovimientoStockById/2"
+        name: getMovimientoStockById
+        meta:
+          id: req_fe80aacc59144befa0e38d33435dddb8
+          created: 1745144857568
+          modified: 1745167660848
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/movimientoStock/createMovimientoStock"
+        name: createMovimientoStock
+        meta:
+          id: req_a30815567b7b4d9685e4c18d9b598bd3
+          created: 1745144857571
+          modified: 1745168164703
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_producto":1,
+            	"tipo_mov":"salida",
+            	"cantidad":170,
+            	"observacion":"se ha entregado 20 tabletas de paracetamol"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/movimientoStock/updateMovimientoStock/4"
+        name: updateMovimientoStock
+        meta:
+          id: req_8c183965354f4386ae642696a6120ebf
+          created: 1745144857574
+          modified: 1745168390330
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id":4,
+            	"id_producto":1,
+            	"tipo_mov":"salida",
+            	"cantidad":170,
+            	"observacion":"se ha vendido 170 tabletas de paracetamol"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/movimientoStock/deleteMovimientoStock/4"
+        name: deleteMovimientoStock
+        meta:
+          id: req_a2aacaf5b63d45faac99a03837a4e652
+          created: 1745144857581
+          modified: 1745168463391
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: venta
+    meta:
+      id: fld_449f71125f4e41bd9f67d1600aa6da7d
+      created: 1745144870009
+      modified: 1745144870009
+      sortKey: -1733245315288.375
+    children:
+      - url: "{{ _.url }}/venta/getAllVentas"
+        name: getAllVentas
+        meta:
+          id: req_9159022eef6b40a497bf9a803233d8f5
+          created: 1745144870011
+          modified: 1745168550623
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/venta/getVentaById/2"
+        name: getVentaById
+        meta:
+          id: req_1d21c833239946f4a38dc8e09482868b
+          created: 1745144870025
+          modified: 1745170008812
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/venta/createVenta"
+        name: createVenta
+        meta:
+          id: req_f619fc8edaaa4e40878c638cdbfef344
+          created: 1745144870027
+          modified: 1745170078595
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_tipo_comprobante":2,
+            	"id_cliente":1,
+            	"id_vendedor":1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/venta/updateVenta/2"
+        name: updateVenta
+        meta:
+          id: req_2ec93fe13cd84b9cbe34ba38b51dc8ce
+          created: 1745144870029
+          modified: 1745170188477
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id":2,
+            	"id_tipo_comprobante":1,
+            	"id_cliente":1,
+            	"id_vendedor":1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/venta/deleteVenta/2"
+        name: deleteVenta
+        meta:
+          id: req_c1481660039f4d3e9a45f4838dbf5e9b
+          created: 1745144870032
+          modified: 1745170242222
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: ventaLinea
+    meta:
+      id: fld_e28b3e6abc054b47b5e50d20e2400d05
+      created: 1745144887504
+      modified: 1745144887504
+      sortKey: -1733342507871.4375
+    children:
+      - url: "{{ _.url }}/ventaLinea/getAllVentaLineas"
+        name: getAllVentaLineas
+        meta:
+          id: req_ce9e05fdf6cc435e941c9a9bae44594c
+          created: 1745144887506
+          modified: 1745167342372
+          isPrivate: false
+          sortKey: -1745102839072
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/ventaLinea/getVentaLineasByVentaId/1"
+        name: getVentaLineasByVentaId
+        meta:
+          id: req_dc317a4e0a9b42898c248974b1a32bb0
+          created: 1745144887510
+          modified: 1745173976975
+          isPrivate: false
+          sortKey: -1745102913603
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/ventaLinea/createVentaLinea"
+        name: createVentaLinea
+        meta:
+          id: req_4fb9579fc8234f7aa05b39eb89d6717e
+          created: 1745144887513
+          modified: 1745175727728
+          isPrivate: false
+          sortKey: -1745102981817
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_venta":1,
+            	"id_producto":1,
+            	"cantidad":12
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/ventaLinea/updateVentaLinea/2"
+        name: updateVentaLinea
+        meta:
+          id: req_4e224f63c8f94b7998aa18c955a913c8
+          created: 1745144887515
+          modified: 1745175914623
+          isPrivate: false
+          sortKey: -1745102947710
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id_venta":1,
+            	"id_producto":1,
+            	"cantidad":12
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.url }}/ventaLinea/deleteVentaLinea/2"
+        name: deleteVentaLinea
+        meta:
+          id: req_8b21010eb78e4e2bb42a1bf6fd3fa580
+          created: 1745144887518
+          modified: 1745175979221
+          isPrivate: false
+          sortKey: -1745106744164
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_11fd0d95c8003d698c29ce4b09952d7ac45deb8b
+    created: 1745102321590
+    modified: 1745102321590
+environments:
+  name: Base Environment
+  meta:
+    id: env_11fd0d95c8003d698c29ce4b09952d7ac45deb8b
+    created: 1745102321586
+    modified: 1745102764756
+    isPrivate: false
+  data:
+    url: http://localhost:3000
