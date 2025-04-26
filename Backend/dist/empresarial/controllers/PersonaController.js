@@ -37,17 +37,7 @@ const createPerson = async (req, res) => {
     try {
         const { nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion } = req.body;
         const [result] = await database_1.default.query('CALL insertar_persona(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [
-            nombres,
-            apellidos,
-            fecha_nac,
-            correo,
-            celular,
-            id_estado_civil,
-            id_nivel_socio,
-            id_tipo_doc,
-            codigo,
-            id_distrito,
-            direccion
+            nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
         ]);
         res.status(201).json({
             message: 'Persona insertada correctamente',
@@ -67,18 +57,7 @@ const updatePerson = async (req, res) => {
         const { id } = req.params;
         const { nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion } = req.body;
         const [result] = await database_1.default.query('CALL actualizar_persona(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [
-            Number(id),
-            nombres,
-            apellidos,
-            fecha_nac,
-            correo,
-            celular,
-            id_estado_civil,
-            id_nivel_socio,
-            id_tipo_doc,
-            codigo,
-            id_distrito,
-            direccion
+            Number(id), nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
         ]);
         res.json({
             message: 'Persona actualizada correctamente',

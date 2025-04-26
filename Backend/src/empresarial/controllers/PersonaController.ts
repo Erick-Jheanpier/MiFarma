@@ -36,33 +36,13 @@ export const getPersonById = async (req: Request, res: Response) => {
 export const createPerson = async (req: Request, res: Response) => {
     try {
       const {
-        nombres,
-        apellidos,
-        fecha_nac,
-        correo,
-        celular,
-        id_estado_civil,
-        id_nivel_socio,
-        id_tipo_doc,
-        codigo,
-        id_distrito,
-        direccion
+        nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
       } = req.body;
   
       const [result]: any = await pool.query(
         'CALL insertar_persona(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [
-          nombres,
-          apellidos,
-          fecha_nac,
-          correo,
-          celular,
-          id_estado_civil,
-          id_nivel_socio,
-          id_tipo_doc,
-          codigo,
-          id_distrito,
-          direccion
+          nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
         ]
       );
   
@@ -82,34 +62,13 @@ export const createPerson = async (req: Request, res: Response) => {
     try {
       const { id } = req.params; 
       const {
-        nombres,
-        apellidos,
-        fecha_nac,
-        correo,
-        celular,
-        id_estado_civil,
-        id_nivel_socio,
-        id_tipo_doc,
-        codigo,
-        id_distrito,
-        direccion
+        nombres, apellidos, fecha_nac, correo, celular, id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
       } = req.body;
   
       const [result]: any = await pool.query(
         'CALL actualizar_persona(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [
-          Number(id), 
-          nombres,
-          apellidos,
-          fecha_nac,
-          correo,
-          celular,
-          id_estado_civil,
-          id_nivel_socio,
-          id_tipo_doc,
-          codigo,
-          id_distrito,
-          direccion
+          Number(id), nombres, apellidos, fecha_nac, correo, celular,  id_estado_civil, id_nivel_socio, id_tipo_doc, codigo, id_distrito, direccion
         ]
       );
   
